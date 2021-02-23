@@ -32,12 +32,44 @@ if (!$f3->exists('SESSION.userName')) $f3->set('SESSION.userName', 'UNSET');
 /////////////////////////////////////////////
 
 
-$f3->route('GET /',
+$f3->route('GET /',  // GRC home page
   function ($f3) {
-    $f3->set('html_title','Simple Example Home');
-    $f3->set('content','simpleform.html');
+    $f3->set('html_title','Global Recipe Collection');
+    $f3->set('content','index.html');
     echo Template::instance()->render('layout.html');
   }
+);
+
+$f3->route('GET /projectreport',
+    function ($f3) {
+        $f3->set('html_title','Project Report');
+        $f3->set('content','projectreport.html');
+        echo Template::instance()->render('layout.html');
+    }
+);
+
+$f3->route('GET /viewrecipe',
+    function ($f3) {
+        $f3->set('html_title','View Recipe');
+        $f3->set('content','viewrecipe.html');
+        echo Template::instance()->render('layout.html');
+    }
+);
+
+$f3->route('GET /creatrecipe',
+    function ($f3) {
+        $f3->set('html_title','Creat Recipe');
+        $f3->set('content','creatrecipe.html');
+        echo Template::instance()->render('layout.html');
+    }
+);
+
+$f3->route('GET /login',
+    function ($f3) {
+        $f3->set('html_title','Log In');
+        $f3->set('content','login 2.html');
+        echo Template::instance()->render('layout.html');
+    }
 );
 
 // When using GET, provide a form for the user to log in to a simple F3-managed session
