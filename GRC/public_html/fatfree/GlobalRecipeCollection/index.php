@@ -56,7 +56,7 @@ $f3->route('GET /viewrecipe',
     }
 );
 
-$f3->route('GET /creatrecipe',
+$f3->route('GET /createrecipe',
     function ($f3) {
         $f3->set('html_title','Creat Recipe');
         $f3->set('content','creatrecipe.html');
