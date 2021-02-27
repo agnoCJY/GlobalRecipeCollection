@@ -12,20 +12,26 @@ header{
 }
 
 .logo{
-    height: 100px;
-    margin-top: 20px;
-    margin-left: 20px;
+    height: 80px;
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
 .logo_div{
     float: left;
 }
 
+.menu{
+    width: 100%;
+}
+
 .menu ul{
+    margin-left: 45em;
     margin-top: 70px;
     list-style: none;
-    margin-right: 80px;
+    /*margin-right: 80px;*/
     color: #F23D4C;
+    display: table;
 }
 
 .menu li{
@@ -33,6 +39,7 @@ header{
     float: right;
     font-family: 'Raleway', sans-serif;
     color: #F23D4C;
+    display: table-cell;
 }
 
 .button{

@@ -48,15 +48,40 @@ $f3->route('GET /projectreport',
     }
 );
 
-$f3->route('GET /viewrecipe',
+$f3->route('GET /viewrecipe-navigate',
     function ($f3) {
+        $controller = new SimpleController;
+        $list = $controller->getData();
+
+        $f3->set("dbData", $list);
         $f3->set('html_title','View Recipe');
         $f3->set('content','viewrecipe.html');
         echo Template::instance()->render('layout.html');
     }
 );
 
-$f3->route('GET /creatrecipe',
+$f3->route('POST /viewrecipe-navigate',
+    function($f3) {
+//        $f3->set('html_title','Simple Pet Response');
+        $f3->reroute('/viewrecipe-navigate');
+    }
+);
+
+
+$f3->route('GET /viewrecipe-search',
+    function ($f3) {
+        $controller = new SimpleController;
+        $alldata = $controller->getAllData();
+
+        $f3->set("dbData", $alldata);
+
+        $f3->set('html_title','View Recipe');
+        $f3->set('content','viewrecipe_search.html');
+        echo Template::instance()->render('layout.html');
+    }
+);
+
+$f3->route('GET /createrecipe',
     function ($f3) {
         $f3->set('html_title','Creat Recipe');
         $f3->set('content','creatrecipe.html');

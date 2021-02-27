@@ -91,28 +91,62 @@ header{
     letter-spacing: 1px;
 }
 
-.navigate_a:link{color: white;}
-.navigate_a:visited {color: white;}  /* 已访问链接 */
-.navigate_a:hover {color: white;}  /* 鼠标移动到链接上 */
-.navigate_a:active {color: white;}  /* 鼠标点击时 */
+.navigate_a:link{color: #F23D4C;}
+.navigate_a:visited {color: #F23D4C;}  /* 已访问链接 */
+.navigate_a:hover {color: #F23D4C;}  /* 鼠标移动到链接上 */
+.navigate_a:active {color: #F23D4C;}  /* 鼠标点击时 */
 
-.search:link{color: #F23D4C;}
-.search_a:visited {color: #F23D4C;}  /* 已访问链接 */
-.search_a:hover {color: #F23D4C;}  /* 鼠标移动到链接上 */
-.search_a:active {color: #F23D4C;}  /* 鼠标点击时 */
+.search:link{color: white;}
+.search_a:visited {color: white;}  /* 已访问链接 */
+.search_a:hover {color: white;}  /* 鼠标移动到链接上 */
+.search_a:active {color: white;}  /* 鼠标点击时 */
 
-.recipe{
-    height: 400px;
-    margin-top: 70px;
-    text-align: center;
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 90%;
+    border-radius: 5px;
 }
 
-.recipe_photo
-{
-    /*max-height: 100%;*/
-    /*margin: 0 auto;*/
-    height: auto;
-    width: 1300px;
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+    height: 200px;
     object-fit: cover;
 }
 
+.container {
+    padding: 2px 16px;
+}
+
+
+
+.buy-one-buy{
+    width: 1250px;/*之后要改回去1200*/
+    /*margin-left: 100px;*/
+}
+
+.buy-one-buy ul{
+    list-style: none;
+}
+
+#recipe{
+    float: left;
+    width: 30%;
+    /*margin-right: 4%;*/
+    height: 350px;
+}
+
+.buy-one-buy li:last-child{
+    margin-right: 0%;
+}
+
+#filter{
+    float: right;
+    width: 10%;
+    /*margin-right: 4%;*/
+    height: 180px;
+}

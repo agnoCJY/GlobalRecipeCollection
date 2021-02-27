@@ -26,11 +26,11 @@ header{
 }
 
 .menu ul{
-    margin-left: 34em;
+    margin-left: 45em;
     margin-top: 70px;
     list-style: none;
-    /*margin-right: 80px;*/®
-color: #F23D4C;
+    /*margin-right: 80px;*/
+    color: #F23D4C;
     display: table;
 }
 
@@ -97,8 +97,7 @@ color: #F23D4C;
     letter-spacing: 5px;
 }
 
-
-.intro-title{
+.line{
     position: absolute;
     top: 250px;
     right: 500px;
@@ -112,6 +111,19 @@ color: #F23D4C;
     font-family: 'Roboto Slab', serif;
     font-size: 20px;
     letter-spacing: 1px;
+}
+
+.intro-title{
+    position: absolute;
+    top: 250px;
+    right: 100px;
+    width: 400px;
+    height: 23px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: left;
 }
 
 .intro{
