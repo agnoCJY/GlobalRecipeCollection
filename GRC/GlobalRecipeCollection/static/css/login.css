@@ -26,7 +26,7 @@ header{
 }
 
 .menu ul{
-    margin-left: 45em;
+    margin-left: 35em;
     margin-top: 70px;
     list-style: none;
     /*margin-right: 80px;*/
@@ -48,4 +48,65 @@ header{
 
 .list{
     text-align:center;
+}
+
+.login{
+    width:1200px;
+    overflow: hidden;
+}
+
+.animation{
+    width:600px;
+    height:500px;
+    float: left;
+}
+
+.form{
+    width:600px;
+    height:500px;
+    float: right;
+}
+
+.form form{
+    margin-top: 100px;
+    margin-left: 200px;
+
+}
+
+#fname{
+    width: 400px;
+    height: 40px;
+    border: 0px;
+    outline:none;
+}
+
+#username{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+#lname{
+    width: 400px;
+    height: 40px;
+    border: 0px;
+    outline:none;
+}
+
+#password{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+#login{
+    border: 0px;
+    background:#F23D4C;
+    color: white;
+    width: 200px;
+    height: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-left: 100px;
+    outline:none;
 }
