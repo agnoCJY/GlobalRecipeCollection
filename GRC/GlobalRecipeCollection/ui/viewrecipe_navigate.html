@@ -32,22 +32,37 @@
     <div class="search"><a class="search_a" href="{{ @BASE }}/viewrecipe-search">Search</a></div>
 </div>
 
-<div class="recipe">
-    <img class="recipe_photo" src="{{ @dbData[0] }}">
+<div class="container">
+    <div class="recipe">
+        <img src="{{ @dbData[0] }}">
+    </div>
+    <div class="recipe_name">{{ @dbData[1] }}</div>
+    <div class="recipe_country"># {{ @dbData[2] }}</div>
+    <div class="recipe_type"># {{ @dbData[3] }}</div>
+    <div class="recipe_time"># {{ @dbData[4] }}</div>
+    <div class="recipe_people"># {{ @dbData[5] }} people</div>
+
+    <div class="moredetial"></div>
+    <img class="mdimg" src="static/img/moredetail.png">
+    <p class="mdp">More Detail</p>
+
+    <div class="likeit"></div>
+    <img class="liimg" src="static/img/heart.png">
+    <div class="lip"><a class="lipa" href="{{ @BASE }}/login">Like It</a></div>
+
+<!--    <form id="form1" name="form1" method="post" action="{{ @BASE }}/viewrecipe-navigate">-->
+<!--        <p>-->
+<!--            <input type="submit" name="Submit" value="Next" />-->
+<!--        </p>-->
+<!--    </form>-->
+
+    <div class="next"></div>
+    <img class="nextimg" src="static/img/next.png">
+    <div class="nextp"><a class="lipa" href="{{ @BASE }}/viewrecipe-navigate">Next</a></div>
+
 </div>
-<div class="recipe_name">{{ @dbData[1] }}</div>
-<div class="recipe_country">{{ @dbData[2] }}</div>
-<div class="recipe_type">{{ @dbData[3] }}</div>
-<div class="recipe_time">{{ @dbData[4] }}</div>
-<div class="recipe_people">{{ @dbData[5] }} people</div>
 
 
-
-<form id="form1" name="form1" method="post" action="{{ @BASE }}/viewrecipe-navigate">
-    <p>
-        <input type="submit" name="Submit" value="Next" />
-    </p>
-</form>
 
 
 </body>

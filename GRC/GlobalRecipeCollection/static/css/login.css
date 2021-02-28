@@ -56,9 +56,16 @@ header{
 }
 
 .animation{
-    width:600px;
+    width:300px;
     height:500px;
     float: left;
+}
+
+.animation img{
+    max-height: 100%;
+    max-width: 100%;
+    margin-top: 137px;
+    margin-left: 150px;
 }
 
 .form{
@@ -109,4 +116,10 @@ header{
     font-size: 20px;
     margin-left: 100px;
     outline:none;
+}
+
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected {
+    -webkit-text-fill-color: #807c7c;
+    transition: background-color 5000s ease-out 0.5s;
 }

@@ -102,17 +102,202 @@ header{
 .search_a:active {color: #F23D4C;}  /* 鼠标点击时 */
 
 .recipe{
-    height: 400px;
-    margin-top: 70px;
+    margin-top: 20px;
+    height: 750px;
     text-align: center;
 }
 
-.recipe_photo
-{
-    /*max-height: 100%;*/
-    /*margin: 0 auto;*/
-    height: auto;
+.recipe img{
     width: 1300px;
+    max-height: 100%;
+    margin: 0 auto;
+    display: inline-block;
     object-fit: cover;
 }
 
+.container {
+    position: relative;
+    text-align: center;
+    /*color: white;*/
+}
+
+.recipe_name{
+    position: absolute;
+    top: 101px;
+    left: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    border-bottom:3px solid #F23D4C;
+    font-weight: bolder;
+}
+
+.recipe_country{
+    position: absolute;
+    top: 180px;
+    left: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    color: #F23D4C;
+    background: white;
+    border:2px solid white;
+    border-radius:25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.recipe_type{
+    position: absolute;
+    top: 230px;
+    left: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    color: #F23D4C;
+    background: white;
+    border:2px solid white;
+    border-radius:25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.recipe_time{
+    position: absolute;
+    top: 280px;
+    left: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    color: #F23D4C;
+    background: white;
+    border:2px solid white;
+    border-radius:25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.recipe_people{
+    position: absolute;
+    top: 330px;
+    left: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    color: #F23D4C;
+    background: white;
+    border:2px solid white;
+    border-radius:25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.moredetial{
+    position: absolute;
+    top: 430px;
+    left: 100px;
+    background: white;
+    border:2px solid white;
+    border-radius:25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    height: 40px;
+    width: 187px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.mdimg{
+    position: absolute;
+    top: 435px;
+    left: 105px;
+    width: 36px;
+}
+
+.mdp{
+    position: absolute;
+    top: 412px;
+    left: 150px;
+    float: right;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #F23D4C;
+}
+
+.likeit{
+    position: absolute;
+    top: 480px;
+    left: 100px;
+    background: white;
+    border:2px solid white;
+    border-radius:25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    height: 40px;
+    width: 120px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.liimg{
+    position: absolute;
+    top: 487px;
+    left: 107px;
+    width: 36px;
+}
+
+.lip{
+    position: absolute;
+    top: 486px;
+    left: 150px;
+    float: right;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #F23D4C;
+}
+
+.lipa:link{color: #F23D4C;}
+.lipa:visited {color: #F23D4C;}  /* 已访问链接 */
+.lipa:hover {color: #F23D4C;}  /* 鼠标移动到链接上 */
+.lipa:active {color: #F23D4C;}  /* 鼠标点击时 */
+
+.next{
+    position: absolute;
+    top: 530px;
+    left: 100px;
+    background: white;
+    border:2px solid white;
+    border-radius:25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    height: 40px;
+    width: 101px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.nextimg{
+    position: absolute;
+    top: 534px;
+    left: 105px;
+    width: 36px;
+}
+
+.nextp{
+    position: absolute;
+    top: 536px;
+    left: 150px;
+    float: right;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #F23D4C;
+}

@@ -52,11 +52,11 @@ $f3->route('GET /viewrecipe-navigate',
     }
 );
 
-$f3->route('POST /viewrecipe-navigate',
-    function($f3) {
-        $f3->reroute('/viewrecipe-navigate');
-    }
-);
+//$f3->route('POST /viewrecipe-navigate',
+//    function($f3) {
+//        $f3->reroute('/viewrecipe-navigate');
+//    }
+//);
 
 
 $f3->route('GET /viewrecipe-search',
