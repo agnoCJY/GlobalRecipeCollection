@@ -96,7 +96,7 @@ header{
 .navigate_a:hover {color: white;}  /* 鼠标移动到链接上 */
 .navigate_a:active {color: white;}  /* 鼠标点击时 */
 
-.search:link{color: #F23D4C;}
+.search_a:link{color: #F23D4C;}
 .search_a:visited {color: #F23D4C;}  /* 已访问链接 */
 .search_a:hover {color: #F23D4C;}  /* 鼠标移动到链接上 */
 .search_a:active {color: #F23D4C;}  /* 鼠标点击时 */
