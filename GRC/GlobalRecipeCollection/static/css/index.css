@@ -120,7 +120,7 @@ header{
     width: 400px;
     height: 23px;
     font-family: 'Roboto Slab', serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
     letter-spacing: 1px;
     text-align: left;
@@ -129,11 +129,12 @@ header{
 .intro{
     position: absolute;
     top: 300px;
-    right: 150px;
-    width: 350px;
+    right: 130px;
+    width: 370px;
     height: 23px;
     font-family: 'Roboto Slab', serif;
-    font-size: 10px;
+    font-size: 14px;
     letter-spacing: 1px;
     text-align: left;
+    font-weight: 600;
 }
