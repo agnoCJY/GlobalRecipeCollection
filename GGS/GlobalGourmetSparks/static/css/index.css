@@ -7,48 +7,48 @@ a{
     text-decoration:none;
 }
 
-header{
-    overflow: hidden;
-}
+/*header{*/
+/*    overflow: hidden;*/
+/*}*/
 
-.logo{
-    height: 80px;
-    margin-top: 30px;
-    margin-left: 30px;
-}
+/*.logo{*/
+/*    height: 100px;*/
+/*    margin-top: 30px;*/
+/*    margin-left: 30px;*/
+/*}*/
 
-.logo_div{
-    float: left;
-}
+/*.logo_div{*/
+/*    float: left;*/
+/*}*/
 
-.menu{
-    width: 100%;
-}
+/*.menu{*/
+/*    width: 100%;*/
+/*}*/
 
-.menu ul{
-    margin-left: 35em;
-    margin-top: 70px;
-    list-style: none;
-    /*margin-right: 80px;*/
-    color: #F23D4C;
-    display: table;
-}
+/*.menu ul{*/
+/*    margin-left: 35em;*/
+/*    margin-top: 70px;*/
+/*    list-style: none;*/
+/*    !*margin-right: 80px;*!*/
+/*    color: #F23D4C;*/
+/*    display: table;*/
+/*}*/
 
-.menu li{
-    width: 160px;
-    float: right;
-    font-family: 'Raleway', sans-serif;
-    color: #F23D4C;
-    display: table-cell;
-}
+/*.menu li{*/
+/*    width: 160px;*/
+/*    float: right;*/
+/*    font-family: 'Raleway', sans-serif;*/
+/*    color: #F23D4C;*/
+/*    display: table-cell;*/
+/*}*/
 
-.button{
-    display:inline;
-}
+/*.button{*/
+/*    display:inline;*/
+/*}*/
 
-.list{
-    text-align:center;
-}
+/*.list{*/
+/*    text-align:center;*/
+/*}*/
 
 .background{
     margin-top: 100px;
@@ -69,14 +69,13 @@ header{
     /*color: white;*/
 }
 
-.title-en{
+#title_en{
     position: absolute;
     top: 8px;
     left: 150px;
     font-family: 'Roboto Slab', serif;
     font-size: 35px;
     letter-spacing: 8px;
-
 }
 
 .title-pt{
@@ -100,7 +99,7 @@ header{
 .line{
     position: absolute;
     top: 250px;
-    right: 500px;
+    right: 400px;
     width: 5px;
     height: 23px;
     background: #F23D4C;
@@ -116,7 +115,7 @@ header{
 .intro-title{
     position: absolute;
     top: 250px;
-    right: 100px;
+    right: 1px;
     width: 400px;
     height: 23px;
     font-family: 'Roboto Slab', serif;
@@ -129,7 +128,7 @@ header{
 .intro{
     position: absolute;
     top: 300px;
-    right: 130px;
+    right: 30px;
     width: 370px;
     height: 23px;
     font-family: 'Roboto Slab', serif;

@@ -7,24 +7,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="static/js/viewrecipe_search.js"></script>
 
 </head>
 <body style= "background: #EBEEF2">
-    <header>
-        <div class="logo_div">
-            <a href="{{ @BASE}}/"><img  class="logo" src="static/img/brown_logo_without_text.png"></a>
-        </div>
-        <div class="menu">
-            <ul class="list">
-                <li><a class="menu_a" href="https://media.ed.ac.uk/media/Global%20Recipe%20Collection/1_pzuyjr1r">VIDEO</a></li>
-                <li><a class="menu_a" href="static/DWD 750 words text Report-1st submission.pdf">REPORT</a></li>
-                <li><a class="menu_a" href="{{ @BASE }}/login">LOG IN</a></li>
-                <li><a class="menu_a" href="{{ @BASE }}/viewrecipe-navigate"><u><b>VIEW RECIPE</b></u></a></li>
-                <li><a class="menu_a" href="{{ @BASE}}/">HOME</a></li>
-            </ul>
-        </div>
-    </header>
+<header>
+    <div class="float-left box-border h-32 w-32 p-4 ...">
+        <a href="{{ @BASE}}/"><img  class="logo" src="static/img/sparkslogo.png"></a>
+    </div>
+    <div class="box-border pt-8 pr-10 ...">
+        <ul class="flex flex-row-reverse">
+            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="https://media.ed.ac.uk/media/Global%20Recipe%20Collection/1_pzuyjr1r">VIDEO</a></li>
+            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="static/DWD 750 words text Report-1st submission.pdf">REPORT</a></li>
+            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE }}/login">LOG IN</a></li>
+            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE }}/viewrecipe-navigate"><u><b>VIEW RECIPE</b></u></a></li>
+            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE}}/">HOME</a></li>
+        </ul>
+    </div>
+</header>
 
     <div class="switcher">
         <div class="background">

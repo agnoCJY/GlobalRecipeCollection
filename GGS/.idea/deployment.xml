@@ -5,7 +5,7 @@
       <paths name="Edinburgh Domain">
         <serverdata>
           <mappings>
-            <mapping deploy="/public_html/fatfree/FFF-SimpleExamplePet" local="$PROJECT_DIR$" web="/fatfree/FFF-SimpleExamplePet" />
+            <mapping deploy="/public_html/fatfree" local="$PROJECT_DIR$" web="/fatfree/GlobalGourmetSparks" />
           </mappings>
         </serverdata>
       </paths>

@@ -1,54 +1,54 @@
-.menu_a:link{color: #F23D4C;}    /* 未访问链接*/
-.menu_a:visited {color: #f23d4c;}  /* 已访问链接 */
-.menu_a:hover {color:#F23D4C;}  /* 鼠标移动到链接上 */
-.menu_a:active {color:#F23D4C;}  /* 鼠标点击时 */
+/*.menu_a:link{color: #F23D4C;}    !* 未访问链接*!*/
+/*.menu_a:visited {color: #f23d4c;}  !* 已访问链接 *!*/
+/*.menu_a:hover {color:#F23D4C;}  !* 鼠标移动到链接上 *!*/
+/*.menu_a:active {color:#F23D4C;}  !* 鼠标点击时 *!*/
 
-a{
-    text-decoration:none;
-}
+/*a{*/
+/*    text-decoration:none;*/
+/*}*/
 
-header{
-    overflow: hidden;
-}
+/*header{*/
+/*    overflow: hidden;*/
+/*}*/
 
-.logo{
-    height: 80px;
-    margin-top: 30px;
-    margin-left: 30px;
-}
+/*.logo{*/
+/*    height: 100px;*/
+/*    margin-top: 30px;*/
+/*    margin-left: 30px;*/
+/*}*/
 
-.logo_div{
-    float: left;
-}
+/*.logo_div{*/
+/*    float: left;*/
+/*}*/
 
-.menu{
-    width: 100%;
-}
+/*.menu{*/
+/*    width: 100%;*/
+/*}*/
 
-.menu ul{
-    margin-left: 35em;
-    margin-top: 70px;
-    list-style: none;
-    /*margin-right: 80px;*/
-    color: #F23D4C;
-    display: table;
-}
+/*.menu ul{*/
+/*    margin-left: 35em;*/
+/*    margin-top: 70px;*/
+/*    list-style: none;*/
+/*    !*margin-right: 80px;*!*/
+/*    color: #F23D4C;*/
+/*    display: table;*/
+/*}*/
 
-.menu li{
-    width: 160px;
-    float: right;
-    font-family: 'Raleway', sans-serif;
-    color: #F23D4C;
-    display: table-cell;
-}
+/*.menu li{*/
+/*    width: 160px;*/
+/*    float: right;*/
+/*    font-family: 'Raleway', sans-serif;*/
+/*    color: #F23D4C;*/
+/*    display: table-cell;*/
+/*}*/
 
-.button{
-    display:inline;
-}
+/*.button{*/
+/*    display:inline;*/
+/*}*/
 
-.list{
-    text-align:center;
-}
+/*.list{*/
+/*    text-align:center;*/
+/*}*/
 
 .background{
     /*margin-top: 100px;*/

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" filePermissions="420" folderPermissions="493" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="Edinburgh Domains">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/public_html/fatfree/GlobalGourmetSparks" local="$PROJECT_DIR$" web="/fatfree/GlobalGourmetSparks" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

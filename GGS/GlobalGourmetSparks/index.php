@@ -42,16 +42,21 @@ $f3->route('GET /',  // GRC home page
 
 $f3->route('GET /viewrecipe-navigate',
     function ($f3) {
-        $controller = new SimpleController;
-        $list = $controller->getData();
-
-        $f3->set("dbData", $list);
+        //$f3->set("dbData", $list);
         $f3->set('html_title','View Recipe');
         $f3->set('content','viewrecipe_navigate.html');
         echo Template::instance()->render('layout.html');
     }
 );
 
+$f3->route('GET /api/v1/navigation_data',
+    function($f3) {
+        $controller = new SimpleController;
+        $list = $controller->getData();
+        header('Content-Type: application/json');
+        echo json_encode($list);
+    }
+);
 //$f3->route('POST /viewrecipe-navigate',
 //    function($f3) {
 //        $f3->reroute('/viewrecipe-navigate');
@@ -77,6 +82,14 @@ $f3->route('GET /login',
         $f3->set('html_title','Log In');
         $f3->set('content','login.html');
         echo Template::instance()->render('layout.html');
+    }
+);
+
+$f3->route('GET /test',
+    function ($f3) {
+        header('Content-Type: application/json');
+        $data = array('test_field' => 'test_val');
+        echo json_encode($data);
     }
 );
 
