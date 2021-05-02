@@ -10,6 +10,8 @@ class SimpleController {
 		global $f3;						// needed for $f3->get()
 		// $this表示this object
 		$this->recipe = new DB\SQL\Mapper($f3->get('DB'),"recipe");	// create DB query mapper object
+		$this->loginMapper = new DB\SQL\Mapper($f3->get('DB'),"user");	// create DB query mapper object
+
 		// for the "simpleModel" table
 	}
 
@@ -58,6 +60,23 @@ class SimpleController {
 		$list = $this->recipe->find();
 		return $list;
 	}
+
+	public function putIntoDatabase($data) {	
+		$this->recipe->name = $data["name"];					// set value for "name" field
+		$this->recipe->photo = $data["photo"];				// set value for "colour" field
+		$this->recipe->country = $data["country"];				// set value for "colour" field
+		$this->recipe->meal_type = $data["meal_type"];				// set value for "colour" field
+		$this->recipe->meal_time = $data["meal_time"];				// set value for "colour" field
+		$this->recipe->people_quantity = $data["people_quantity"];				// set value for "colour" field
+
+		$this->recipe->save();									// save new record with these fields
+	}
+
+	public function loginUser($user, $pwd) {		// very simple login -- no use of encryption, hashing etc.
+		$auth = new \Auth($this->loginMapper, array('id'=>'username', 'pw'=>'password'));	// fields in table
+		return $auth->login($user, $pwd); 			// returns true on successful login
+	}
+
 
 
 

@@ -121,6 +121,17 @@
     /*color: white;*/
 }
 
+#recipts{
+    position: absolute;
+    top: 220px;
+    left: 80px;
+    /* height: 100px;
+    width: 100px;
+    display: inline-block;
+    object-fit: cover; */
+
+}
+
 .recipe_name{
     position: absolute;
     top: 101px;
@@ -134,7 +145,7 @@
     font-weight: bolder;
 }
 
-.recipe_country{
+/* .recipe_country{
     position: absolute;
     top: 180px;
     left: 100px;
@@ -196,9 +207,9 @@
     border-radius:25px;
     padding-left: 10px;
     padding-right: 10px;
-}
+} */
 
-.moredetial{
+/* .moredetial{
     position: absolute;
     top: 430px;
     left: 100px;
@@ -211,25 +222,37 @@
     height: 40px;
     width: 187px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+} */
 
-.mdimg{
-    position: absolute;
+#mdimg{
+    /* position: absolute;
     top: 435px;
-    left: 105px;
-    width: 36px;
+    left: 105px; */
+    width: 20px;
 }
 
 .mdp{
-    position: absolute;
+    /* position: absolute;
     top: 412px;
     left: 150px;
-    float: right;
+    float: right; */
     font-family: 'Raleway', sans-serif;
-    font-size: 25px;
-    letter-spacing: 1px;
+    font-size: 15px;
+    /* letter-spacing: 1px; */
     color: #F23D4C;
 }
+
+#nextp{
+    /* position: absolute;
+    top: 412px;
+    left: 150px;
+    float: right; */
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    /* letter-spacing: 1px; */
+    color: #F23D4C;
+}
+
 
 .likeit{
     position: absolute;
@@ -291,7 +314,7 @@
     width: 36px;
 }
 
-.nextp{
+/* .nextp{
     position: absolute;
     top: 536px;
     left: 150px;
@@ -300,7 +323,7 @@
     font-size: 25px;
     letter-spacing: 1px;
     color: #F23D4C;
-}
+} */
 
 button{
     outline: none;

@@ -77,21 +77,137 @@ $f3->route('GET /viewrecipe-search',
     }
 );
 
-$f3->route('GET /login',
+$f3->route('GET /share_recipe',
+  function($f3) {
+    switch ($f3->get('GET.step')) {		// PARAMS.msg is whatever was the last element of the URL
+      case "1":
+        $step = "1";
+        $f3->set('content', 'share_recipe_1.html');		// the login form that will be shown to the user
+        break;
+      case "2":
+        $step = "2";
+        $f3->set('content', 'share_recipe_2.html');		// the login form that will be shown to the user
+        break;
+      case "3":
+        $step = "3";
+        $f3->set('content', 'share_recipe_3.html');		// the login form that will be shown to the user
+        break;
+      case "4":
+        $step = "4";
+        $f3->set('content', 'share_recipe_4.html');		// the login form that will be shown to the user
+        break;
+    }
+    $f3->set('html_title', 'Share Recipe');
+    $f3->set('step', $step);				// set message that will be shown to user in the login.html template
+    // $f3->set('content', 'login.html');		// the login form that will be shown to the user
+    echo template::instance()->render('layout.html');
+  }
+
+);
+
+$f3->route('POST /share_recipe',
+  function($f3) {
+    switch ($f3->get('GET.step')) {		// PARAMS.msg is whatever was the last element of the URL
+      case "1":
+        $step = "1";
+        $f3->set('content', 'share_recipe_1.html');		// the login form that will be shown to the user
+        $formdata = array();			// array to pass on the entered data in
+        $formdata["name"] = $f3->get('POST.name');			// whatever was called "name" on the form
+        $formdata["photo"] = $f3->get('POST.photo');			// whatever was called "name" on the form
+        $formdata["country"] = $f3->get('POST.country');		// whatever was called "colour" on the form
+        $formdata["meal_type"] = $f3->get('POST.meal_type');		// whatever was called "colour" on the form
+        $formdata["meal_time"] = $f3->get('POST.meal_time');		// whatever was called "colour" on the form
+        $formdata["people_quantity"] = $f3->get('POST.people_quantity');		// whatever was called "colour" on the form
+      
+          
+          $controller = new SimpleController;
+          $controller->putIntoDatabase($formdata);
+          
+        $f3->set('formData',$formdata);		// set info in F3 variable for access in response template      
+        break;
+      case "2":
+        $step = "2";
+        $f3->set('content', 'share_recipe_2.html');		// the login form that will be shown to the user
+        break;
+      case "3":
+        $step = "3";
+        $f3->set('content', 'share_recipe_3.html');		// the login form that will be shown to the user
+        break;
+      case "4":
+        $step = "4";
+        $f3->set('content', 'share_recipe_4.html');		// the login form that will be shown to the user
+        break;
+    }
+
+	
+  $f3->set('html_title', 'Share Recipe');
+  $f3->set('step', $step);				// set message that will be shown to user in the login.html template
+  // $f3->set('content', 'login.html');		// the login form that will be shown to the user
+  echo template::instance()->render('layout.html');
+
+  }
+);
+
+
+$f3->route('GET /login',				// @msg is a parameter that tells us which message to give the user
+  function($f3) {
+    switch ($f3->get('GET.msg')) {		// PARAMS.msg is whatever was the last element of the URL
+    	case "err":
+    		$msg = "N";
+    		break;
+    	default:						// this is the case if neither of the above cases is matched
+    		$msg = "Y";
+    }
+    $f3->set('html_title', 'Login In');
+    $f3->set('message', $msg);				// set message that will be shown to user in the login.html template
+	// $f3->set('thisIsLoginPage', 'true');	// set flag that will be tested in layout.html, to say this is login page
+    $f3->set('content', 'login.html');		// the login form that will be shown to the user
+    echo template::instance()->render('layout.html');
+  }
+);
+
+// When using POST, do the login and session management
+$f3->route('POST /login',
+  function($f3) {
+    $controller = new SimpleController;
+    if ($controller->loginUser($f3->get('POST.uname'), $f3->get('POST.password'))) {		// user is recognised
+		$f3->set('SESSION.userName', $f3->get('POST.uname'));			// note that this is a global that will be available elsewhere
+        header("location:/fatfree/GlobalGourmetSparks/");                  // will always go to simplepet after successful login
+    }
+    else{
+    	// $f3->reroute('/login?msg=err');		// return to login page with the message that there was an error in the credentials
+      header("location: /fatfree/GlobalGourmetSparks/login?msg=err");
+    }
+  });
+
+  				// set message that will be shown to user in the login.html template
+
+$f3->route('POST /logout',
+  function($f3) {
+		$f3->set('SESSION.userName', 'UNSET');
+    	$f3->reroute('/login/lo');		// return to login page with the message that the user has been logged out
+  }
+);
+
+$f3->route('GET /user_info',
     function ($f3) {
-        $f3->set('html_title','Log In');
-        $f3->set('content','login.html');
+        $f3->set('html_title','User Info');
+        $f3->set('content','user_info.html');
         echo Template::instance()->render('layout.html');
     }
 );
 
-$f3->route('GET /test',
-    function ($f3) {
-        header('Content-Type: application/json');
-        $data = array('test_field' => 'test_val');
-        echo json_encode($data);
-    }
+$f3->route('POST /user_info',
+  function($f3) {
+		$f3->set('SESSION.userName', 'UNSET');
+    header("location:/fatfree/GlobalGourmetSparks/login");                  // will always go to simplepet after successful login
+  }
 );
+
+
+$f3->route('GET /api/v1/recipe', 'RecipeController->get');
+$f3->route('GET /api/v1/my-recipe', 'RecipeController->my_recipe');
+$f3->route('POST /api/v1/upload', 'FileUpload->upload');
 
 $f3->run();
 

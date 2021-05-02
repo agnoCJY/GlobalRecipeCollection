@@ -133,7 +133,7 @@ img {
     list-style: none;
 }
 
-#recipe{
+.recipe{
     float: left;
     width: 30%;
     /*margin-right: 4%;*/
