@@ -19,8 +19,8 @@
     </div>
     <div class="box-border pt-8 pr-10 ...">
         <ul class="flex flex-row-reverse">
-<!--            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="https://media.ed.ac.uk/media/Global%20Recipe%20Collection/1_pzuyjr1r">VIDEO</a></li>-->
-            <li class="box-border w-50 p-4 ..."><a href="{{ @BASE }}/report_video">REPORT & VIDEO</a></li>
+<!--            <li class="box-border w-50 p-4 ..."><a href="https://media.ed.ac.uk/media/Global%20Recipe%20Collection/1_pzuyjr1r">VIDEO</a></li>-->
+            <li class="box-border w-50 p-4 ..."><a href="{{ @BASE }}/report_video"><u><b>REPORT & VIDEO</b></u></a></li>
             <check if="{{ @SESSION.userName=='UNSET' }}">
                 <false>
                     <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE }}/user_info">Hi, {{ @SESSION.userName }}</a></li>
@@ -31,28 +31,24 @@
             </check>
             <check if="{{ @SESSION.userName=='UNSET' }}">
                 <false>
-                    <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE }}/share_recipe?step=1"><b><u>SHARE RECIPE</u></b></a></li>
+                    <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE }}/share_recipe?step=1">SHARE RECIPE</a></li>
                 </false>
                 <true>
-                    <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE }}/login"><b><u>SHARE RECIPE</u></b></a></li>
+                    <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE }}/login">SHARE RECIPE</a></li>
                 </true>
-            </check>      
-            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE }}/viewrecipe-navigate">VIEW RECIPE</a></li>
-            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE}}/">HOME</a></li>
+            </check>
+            <li class="box-border w-50 p-4 ..."><a href="{{ @BASE }}/viewrecipe-navigate">VIEW RECIPE</a></li>
+            <li class="box-border w-50 p-4 ..."><a href="{{ @BASE}}/">HOME</a></li>
         </ul>
     </div>
 </header>
 
-<div class="flex justify-center">
-    <img  class="h-72 mt-10" src="static/img/fruits-animation.gif">
-</div>
+<div style="color: black; font-size: 20px" class="mt-20 mx-40"><a href="static/DWD 750 words text Report-1st submission.pdf"><u>Alpha prototype report</u></a></div>
+<div style="color: black; font-size: 20px" class="mt-20 mx-40"><a href="https://media.ed.ac.uk/media/Global%20Recipe%20Collection/1_pzuyjr1r"><u>Alpha prototype video</u></a></div>
 
-<div class="flex justify-center">
-    <div style="color: F23D4C; font-size: 35px; font-weight: bolder">Finish!</div>
-</div>
 
-<!--<div><a href="{{ @BASE }}/">next</a></div>-->
-
+<div style="color: black; font-size: 20px" class="mt-20 mx-40"><a href="static/final Web Report for PDF.pdf"><u>Beta prototype report</u></a></div>
+<div style="color: black; font-size: 20px" class="mt-20 mx-40"><a href="https://media.ed.ac.uk/media/DWD-Screen%20Recording%20(2)/1_w79yviq1"><u>Beta prototype video</u></a></div>
 
 </body>
 

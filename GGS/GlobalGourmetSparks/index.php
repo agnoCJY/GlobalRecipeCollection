@@ -118,13 +118,16 @@ $f3->route('POST /share_recipe',
         $formdata["meal_type"] = $f3->get('POST.meal_type');		// whatever was called "colour" on the form
         $formdata["meal_time"] = $f3->get('POST.meal_time');		// whatever was called "colour" on the form
         $formdata["people_quantity"] = $f3->get('POST.people_quantity');		// whatever was called "colour" on the form
-      
-          
+          $formdata["URL"] = $f3->get('POST.URL');		// whatever was called "colour" on the form
+
+
           $controller = new SimpleController;
-          $controller->putIntoDatabase($formdata);
+          $controller->putIntoDatabase($formdata, $f3);
           
-        $f3->set('formData',$formdata);		// set info in F3 variable for access in response template      
-        break;
+        $f3->set('formData',$formdata);		// set info in F3 variable for access in response template
+          header("location:/fatfree/GlobalGourmetSparks/share_recipe?step=4");                  // will always go to simplepet after successful login
+
+          break;
       case "2":
         $step = "2";
         $f3->set('content', 'share_recipe_2.html');		// the login form that will be shown to the user
@@ -172,7 +175,7 @@ $f3->route('POST /login',
     $controller = new SimpleController;
     if ($controller->loginUser($f3->get('POST.uname'), $f3->get('POST.password'))) {		// user is recognised
 		$f3->set('SESSION.userName', $f3->get('POST.uname'));			// note that this is a global that will be available elsewhere
-        header("location:/fatfree/GlobalGourmetSparks/");                  // will always go to simplepet after successful login
+        header("location:/fatfree/GlobalGourmetSparks/user_info");                  // will always go to simplepet after successful login
     }
     else{
     	// $f3->reroute('/login?msg=err');		// return to login page with the message that there was an error in the credentials
@@ -203,6 +206,15 @@ $f3->route('POST /user_info',
     header("location:/fatfree/GlobalGourmetSparks/login");                  // will always go to simplepet after successful login
   }
 );
+
+$f3->route('GET /report_video',  // GRC home page
+    function ($f3) {
+        $f3->set('html_title','Report & Video');
+        $f3->set('content','report.html');
+        echo Template::instance()->render('layout.html');
+    }
+);
+
 
 
 $f3->route('GET /api/v1/recipe', 'RecipeController->get');

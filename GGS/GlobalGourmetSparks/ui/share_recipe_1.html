@@ -19,8 +19,8 @@
     </div>
     <div class="box-border pt-8 pr-10 ...">
         <ul class="flex flex-row-reverse">
-            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="https://media.ed.ac.uk/media/Global%20Recipe%20Collection/1_pzuyjr1r">VIDEO</a></li>
-            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="static/DWD 750 words text Report-1st submission.pdf">REPORT</a></li>
+<!--            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="https://media.ed.ac.uk/media/Global%20Recipe%20Collection/1_pzuyjr1r">VIDEO</a></li>-->
+            <li class="box-border w-50 p-4 ..."><a href="{{ @BASE }}/report_video">REPORT & VIDEO</a></li>
             <check if="{{ @SESSION.userName=='UNSET' }}">
                 <false>
                     <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE }}/user_info">Hi, {{ @SESSION.userName }}</a></li>
@@ -62,8 +62,8 @@
                 Name:
                 <input class="box-border mx-10" name="name" type="text" id="name" size="25" />
             
-                <!-- photo:
-                <input disabled="value" id="input_photo" name="photo" type="text" size="25" /> -->
+<!--                photo:-->
+<!--                <input  id="input_photo" name="photo" type="text" size="25" />-->
             
                 <div>Country:</div>
                 <select class="box-border mx-10" name="country" id="country_selector">
@@ -92,104 +92,62 @@
                 </select>
             </div>
 
-            <div>Type:</div>
-            <select name="meal_type" id="type_selector">
-                <option></option>
-                <option value="Starters">Starters</option>
-                <option value="Main meal">Main meal</option>
-                <option value="Dessert">Dessert</option>
-                <option value="Drink">Drink</option>
-            </select>
-        
-            <div>Time:</div>
-            <select name="meal_time" id="time_selector">
-                <option></option>
-                <option value="Breakfast">Breakfast</option>
-                <option value="Lunch">Lunch</option>
-                <option value="Dinner">Dinner</option>
-            </select>
-        
-            <div>People:</div>
-            <select name="people_qantity" id="people_selector">
-                <option></option>
-                <option value="1-3">1~3</option>
-                <option value="4-6">4~6</option>
-                <option value="7-9">7~9</option>
-                <option value="9-">>9</option>
-            </select>
-          
-          <p>
-            <input type="submit" name="Submit" value="Submit" />
-          </p>
+<!--            <div class="box-border mt-10">photo:</div>-->
+            <input style="display: none" class="box-border mx-20" id="input_photo" name="photo" type="text" size="25" />
+
+
+            <div class="flex flex-row= ...">
+                <div class="box-border mt-10">Type:</div>
+                <select class="box-border mx-10 mt-10" name="meal_type" id="type_selector">
+                    <option></option>
+                    <option value="Starters">Starters</option>
+                    <option value="Main meal">Main meal</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Drink">Drink</option>
+                </select>
+
+                <div class="box-border mt-10">Time:</div>
+                <select class="box-border mx-10 mt-10" name="meal_time" id="time_selector">
+                    <option></option>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                </select>
+            </div>
+
+            <div class="flex flex-row= ...">
+
+                <div class="box-border mt-10">People:</div>
+                <input class="box-border mt-10 mx-10" name="people_quantity" type="number" id="people_selector" size="25" />
+
+<!--                <select class="box-border mt-10 mx-10" name="people_qantity" id="people_selector">-->
+<!--                    <option></option>-->
+<!--                    <option value="1-3">1~3</option>-->
+<!--                    <option value="4-6">4~6</option>-->
+<!--                    <option value="7-9">7~9</option>-->
+<!--                    <option value="9-">>9</option>-->
+<!--                </select>-->
+
+                <div class="box-border mt-10">URL:</div>
+                <input class="box-border mt-10 mx-10" name="URL" type="text" size="25" />
+            </div>
+
+<br><br><br><br>
+
+
+            <form class="flex justify-center mt-20 ..." method=post action="{{ @BASE }}/user_info">
+                <input style="background: #F23D4C;  border-radius: 15px; width: 150px; height: 50px; color: white; font-weight: bolder; font-size: 25px;" type="submit" name="Submit" value="Submit" />
+            </form>
+
+
+
           </form>
             </div>
 </div>
 
 
-<!-- <img id="upload_file_img" src="static/img/upload.png">
-<input type="file" id="upload_file" style="display:none"/> -->
 
-<!-- <form id="form1" name="form1" method="post" action="{{ @BASE }}/share_recipe?step=1">
-    Name:
-    <input name="name" type="text" id="name" size="25" />
-
-    photo:
-    <input id="input_photo" name="photo" type="text" size="25" />
-
-    <div>Country:</div>
-    <select name="country" id="country_selector">
-        <option value="China">China</option>
-        <option value="Italy">Italy</option>
-        <option value="Amarica">Amarica</option>
-        <option value="Thailand">Thailand</option>
-        <option value="Mexico">Mexico</option>
-        <option value="Spain">Spain</option>
-        <option value="England">England</option>
-        <option value="Morocco">Morocco</option>
-        <option value="Peru">Peru</option>
-        <option value="India">India</option>
-        <option value="Greek">Greek</option>
-        <option value="French">French</option>
-        <option value="Sri Lanka">Sri Lanka</option>
-        <option value="South Korea">South Korea</option>
-        <option value="Japan">Japan</option>
-        <option value="Vietnam">Vietnam</option>
-        <option value="Welsh">Welsh</option>
-        <option value="Egypt">Egypt</option>
-        <option value="Ireland">Ireland</option>
-        <option value="Malaysia">Malaysia</option>
-
-    </select>
-
-    <div>Type:</div>
-    <select name="meal_type" id="type_selector">
-        <option value="Starters">Starters</option>
-        <option value="Main meal">Main meal</option>
-        <option value="Dessert">Dessert</option>
-        <option value="Drink">Drink</option>
-    </select>
-
-    <div>Time:</div>
-    <select name="meal_time" id="time_selector">
-        <option value="Breakfast">Breakfast</option>
-        <option value="Lunch">Lunch</option>
-        <option value="Dinner">Dinner</option>
-    </select>
-
-    <div>People:</div>
-    <select name="people_qantity" id="people_selector">
-        <option value="1-3">1~3</option>
-        <option value="4-6">4~6</option>
-        <option value="7-9">7~9</option>
-        <option value="9-">>9</option>
-    </select>
-  
-  <p>
-    <input type="submit" name="Submit" value="Submit" />
-  </p>
-  </form> -->
-
-<div><a href="{{ @BASE }}/share_recipe?step=2">next</a></div>
+<!--<div><a href="{{ @BASE }}/share_recipe?step=4">next</a></div>-->
 <script>
 $(function() {
     $('#upload_file_img').click(function() {

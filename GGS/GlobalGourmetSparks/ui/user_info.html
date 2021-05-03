@@ -17,8 +17,8 @@
     </div>
     <div class="box-border pt-8 pr-10 ...">
         <ul class="flex flex-row-reverse">
-            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="https://media.ed.ac.uk/media/Global%20Recipe%20Collection/1_pzuyjr1r">VIDEO</a></li>
-            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="static/DWD 750 words text Report-1st submission.pdf">REPORT</a></li>
+<!--            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="https://media.ed.ac.uk/media/Global%20Recipe%20Collection/1_pzuyjr1r">VIDEO</a></li>-->
+            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE }}/report_video">REPORT & VIDEO</a></li>
             <check if="{{ @SESSION.userName=='UNSET' }}">
                 <false>
                     <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE }}/user_info"><b><u>Hi, {{ @SESSION.userName }}</u></b></a></li>
@@ -41,17 +41,29 @@
     </div>
 </header>
 
-<form method=post action="{{ @BASE }}/user_info">
-    <input type="submit" name="submit" value="Logout">
-</form>
 
- <div class="flex flex-row-reverse">
-    <div class="box-border pr-20 ...">
+<div class="flex flex-row">
+<H1 class="mt-10 mx-10" style="border-bottom:3px solid #F23D4C; font-size: 35px; font-weight: bolder">My Recipe</H1>
+<!--<img class="box-border ml-10 h-5" src="static/img/tea-cup-animation.gif">-->
+</div>
+<div class="flex justify-center mt-10 ...">
         <div class="recipecard">
             <ul id="recipe_list">
             </ul>
         </div>
-    </div>
+
+ </div>
+
+<br><br><br><br><br>
+<form class="flex justify-center mt-10 mb-5 ..." method=post action="{{ @BASE }}/user_info">
+    <input style="background: #F23D4C;  border-radius: 15px; width: 200px; height: 70px; color: white; font-weight: bolder; font-size: 35px;" type="submit" name="submit" value="Logout">
+</form>
+
+<div class="flex justify-center">
+    <img  class="h-40" src="static/img/tea-cup-animation.gif">
+</div>
+
+
 <script>
     $(function() {
         $.getJSON('api/v1/my-recipe', function(data) {
@@ -60,7 +72,7 @@
             let recipe = data[index];
             $('#recipe_list').append(`<li id="recipe-li-${index}" class="recipe">
                 <div class="card">
-                  <img src="static/img/recipe/${recipe.photo}" style="width:100%">
+                  <a href="${recipe.URL}"><img class="h-48" src="static/img/recipe/${recipe.photo}" style="width:100%"></a>
                   <div class="container">
                     <h4><b><u>${recipe.name}</u></b></h4>
 

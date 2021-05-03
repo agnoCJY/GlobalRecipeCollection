@@ -27,22 +27,22 @@ $(document).ready(function () {
       for (let index = 0; index < data.length; index++) {
         let recipe = data[index];
         $('#recipe_list').append(`<li id="recipe-li-${index}" class="recipe">
-            <div class="card">
-              <img src="static/img/recipe/${recipe.photo}" style="width:100%">
-              <div class="container">
-                <h4><b><u>${recipe.name}</u></b></h4>
+                <div class="card">
+                  <a href="${recipe.URL}"><img class="h-48" src="static/img/recipe/${recipe.photo}" style="width:100%"></a>
+                  <div class="container">
+                    <h4><b><u>${recipe.name}</u></b></h4>
 
-              <div class="flex flex-row ...">
-                <p><span style="color:#F23D4C;">#</span> ${recipe.country}</p>
-                <p class="box-border ml-10"><span style="color:#F23D4C;">#</span> ${recipe.meal_time}</p> 
-              </div>
+                  <div class="flex flex-row ...">
+                    <p><span style="color:#F23D4C;">#</span> ${recipe.country}</p>
+                    <p class="box-border ml-10"><span style="color:#F23D4C;">#</span> ${recipe.meal_time}</p> 
+                  </div>
 
-              <div class="flex flex-row ...">
-                <p><span style="color:#F23D4C;">#</span> ${recipe.meal_type}</p>
-                <p class="box-border ml-10"><span style="color:#F23D4C;">#</span> ${recipe.people_quantity} people</p>
-              </div>
-            </div>
-          </li>`);
+                  <div class="flex flex-row ...">
+                    <p><span style="color:#F23D4C;">#</span> ${recipe.meal_type}</p>
+                    <p class="box-border ml-10"><span style="color:#F23D4C;">#</span> ${recipe.people_quantity} people</p>
+                  </div>
+                </div>
+              </li>`);
       }
     })
   }

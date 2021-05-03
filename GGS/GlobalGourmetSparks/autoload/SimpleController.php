@@ -24,6 +24,7 @@ class SimpleController {
 		$type_array = array();
 		$time_array = array();
 		$people_array = array();
+		$URL_array = array();
  		while(!$this->recipe->dry()) {
 			$img = $this->recipe->photo;//db mapper
 			$name = $this->recipe->name;
@@ -31,6 +32,7 @@ class SimpleController {
 			$type = $this->recipe->meal_type;
 			$time = $this->recipe->meal_time;
 			$people = $this->recipe->people_quantity;
+			$URL = $this->recipe->URL;
 
 			array_push($img_array, $img);
 			array_push($name_array, $name);
@@ -38,6 +40,7 @@ class SimpleController {
 			array_push($type_array, $type);
 			array_push($time_array, $time);
 			array_push($people_array, $people);
+			array_push($URL_array, $URL);
 
 			$this->recipe->next();
 		}
@@ -51,7 +54,8 @@ class SimpleController {
 		$recipe_type = $type_array[$index];
 		$recipe_time = $time_array[$index];
 		$recipe_people = $people_array[$index];
-		array_push($list, $imgpath, $recipe_name, $recipe_country, $recipe_type, $recipe_time, $recipe_people);
+		$recipe_URL = $URL_array[$index];
+		array_push($list, $imgpath, $recipe_name, $recipe_country, $recipe_type, $recipe_time, $recipe_people, $recipe_URL);
 
 		return $list;
 	}
@@ -61,13 +65,16 @@ class SimpleController {
 		return $list;
 	}
 
-	public function putIntoDatabase($data) {	
+	public function putIntoDatabase($data, $f3) {
 		$this->recipe->name = $data["name"];					// set value for "name" field
 		$this->recipe->photo = $data["photo"];				// set value for "colour" field
 		$this->recipe->country = $data["country"];				// set value for "colour" field
 		$this->recipe->meal_type = $data["meal_type"];				// set value for "colour" field
 		$this->recipe->meal_time = $data["meal_time"];				// set value for "colour" field
 		$this->recipe->people_quantity = $data["people_quantity"];				// set value for "colour" field
+		$this->recipe->URL = $data["URL"];				// set value for "colour" field
+		$this->recipe->owner = $f3 -> get('SESSION.userName');				// set value for "colour" field
+
 
 		$this->recipe->save();									// save new record with these fields
 	}
@@ -81,6 +88,8 @@ class SimpleController {
 
 
 }
+
+
 
 
 ?>

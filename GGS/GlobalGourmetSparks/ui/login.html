@@ -16,8 +16,8 @@
     </div>
     <div class="box-border pt-8 pr-10 ...">
         <ul class="flex flex-row-reverse">
-            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="https://media.ed.ac.uk/media/Global%20Recipe%20Collection/1_pzuyjr1r">VIDEO</a></li>
-            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="static/DWD 750 words text Report-1st submission.pdf">REPORT</a></li>
+<!--            <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="https://media.ed.ac.uk/media/Global%20Recipe%20Collection/1_pzuyjr1r">VIDEO</a></li>-->
+            <li class="box-border w-50 p-4 ..."><a href="{{ @BASE }}/report_video">REPORT & VIDEO</a></li>
             <check if="{{ @SESSION.userName=='UNSET' }}">
                 <false>
                     <li class="box-border w-50 p-4 ..." id="menu_a" style="color:#F23D4C"><a href="{{ @BASE }}/user_info"><b><u>Hi, {{ @SESSION.userName }}</u></b></a></li>

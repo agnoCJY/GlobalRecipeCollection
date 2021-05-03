@@ -7,6 +7,8 @@ $(document).ready(function () {
             $(".recipe_type").text("# " + data[3]);
             $(".recipe_time").text("# " + data[4]);
             $(".recipe_people").text("# " + data[5] + " people");
+            $(".more_detail").attr('href', data[6]);
+
         });
     }
     loadData();
